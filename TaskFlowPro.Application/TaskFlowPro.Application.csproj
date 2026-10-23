@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework> <!-- Targets .NET 9 framework -->
+    <ImplicitUsings>enable</ImplicitUsings> <!-- Enables global implicit namespace usings -->
+    <Nullable>enable</Nullable> <!-- Enables C# strict nullable reference type checks -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- References the Domain layer so Application knows about entities -->
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.2.0" />
+    <ProjectReference Include="..\TaskFlowPro.Domain\TaskFlowPro.Domain.csproj" />
+    
+    <!-- Installs Entity Framework Core package so Application can define DbSet in interfaces -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+  </ItemGroup>
+
+</Project>
